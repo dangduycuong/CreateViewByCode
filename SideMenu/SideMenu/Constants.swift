@@ -9,7 +9,7 @@
 import Foundation
 
 extension Notification.Name {
-    static let toggle                 = Notification.Name("toggle")
+    static let toggle = Notification.Name("toggle")
 }
 
 enum Keys : String {
