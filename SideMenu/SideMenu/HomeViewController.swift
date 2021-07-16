@@ -25,7 +25,7 @@ class HomeViewController: UIViewController {
     
     var selectedWorkingType: WorkingType? {
         didSet {
-            guard let selectedWorkingType = selectedWorkingType else {return }
+            guard let _ = selectedWorkingType else {return }
             selectedWorkingTypeContainerView.backgroundColor = UIColor.red
             
         }
@@ -118,6 +118,11 @@ class HomeViewController: UIViewController {
     
     @IBAction func onClickedMenu(_ sender: Any) {
         NotificationCenter.default.post(name: .toggle, object: nil, userInfo: nil)
+        
+        let vc = ViewController()
+        vc.modalPresentationStyle = .overFullScreen
+        title = ""
+        navigationController?.pushViewController(vc, animated: true)
     }
     
 }
